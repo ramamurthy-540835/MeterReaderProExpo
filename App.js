@@ -8,7 +8,7 @@ import * as FileSystem from 'expo-file-system';
 
 const OCR_API = 'https://ocr-api-1092842265567.us-central1.run.app';
 const ANALYSIS_API = 'https://power-analysis-api-1092842265567.us-central1.run.app';
-const GEMINI_API_KEY = 'AIzaSyAfAOwK1c2liSC1BYpNq-7k824VZV4j3kw';
+const GEMINI_API_KEY = 'API-KEY';
 const GEMINI_API = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 // TANGEDCO Tariff (Domestic LT I - 0-500 units)
