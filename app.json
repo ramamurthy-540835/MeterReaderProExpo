@@ -1,29 +1,55 @@
 {
   "expo": {
-    "name": "MeterReaderProExpo",
+    "name": "INSTINCT 4.0",
     "slug": "MeterReaderProExpo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "scheme": "meterreaderpro",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#4CAF50"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ramavala.MeterReaderProExpo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#4CAF50"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.ramavala.MeterReaderProExpo",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "minSdkVersion": 21,
+      "targetSdkVersion": 34,
+      "compileSdkVersion": 34
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera for meter reading",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3fc3d720-167c-4b36-8e22-d4729f8ece8a"
+      }
+    },
+    "sdkVersion": "51.0.0"
   }
 }
