@@ -1,0 +1,22 @@
+%%{init: {'flowchart': {'nodeSpacing': 50, 'rankSpacing': 70}}}%%
+flowchart LR
+  subgraph UI_Layer ["UI Layer"]
+    A["MeterReaderProExpo Mobile App
+(User interacts to capture meter readings and view data)"]
+  end
+  subgraph API_Layer ["API Layer"]
+    B["Node.js Backend API
+(Receives/validates readings, authenticates users, serves data)"]
+  end
+  subgraph Processing_Layer ["Processing Layer"]
+    D["GCP Cloud Build/Deployment
+(Automates CI/CD for frontend and backend applications)"]
+  end
+  subgraph Data_Storage_Layer ["Data/Storage Layer"]
+    C["GCP Cloud Database
+(Stores meter readings, user credentials, and configurations)"]
+  end
+  A --> B
+  B --> C
+  D --> A
+  D --> B
